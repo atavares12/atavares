@@ -1,0 +1,30 @@
+{% extends 'layouts/base.html' %}
+{% block title %} Empresa {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<div class="content">
+		<div class="page-inner">
+			<h4 class="page-title">Criar Empresa</h4>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="card">
+
+						<div class="card-body">
+							<div class="chart-container">
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <button type="submit">Criar</button>
+                                </form>
+							</div>
+						</div>
+					</div>
+				</div>
+        </div>
+    </div>
+{% endblock content %}
+
