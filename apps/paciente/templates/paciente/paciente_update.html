@@ -104,57 +104,182 @@
 										<label for="nome" class="placeholder">Nome</label>
 										<input id="nome" type="text" class="form-control " required value="{{ paciente.nome }}">
 
-<div class="dropdown-divider"></div>
+									<div class="dropdown-divider"></div>
 										<div class="row">
 											  <div class="col">
-												  <label for="mae" class="placeholder">Nome Mãe</label>
-												  <input id="mae" type="text" class="form-control" required >
+												  <label for="sexo" class="placeholder">Sexo</label>
+												  <input id="sexo" type="text" class="form-control" value="{{ paciente.sexo }}" required >
 											  </div>
 											  <div class="col">
-												  <label for="pai" class="placeholder">Nome Pai</label>
-												  <input id="pai" type="text" class="form-control"  >
+												  <label for="data_nascimento" class="placeholder">Data Nascimento</label>
+												  <input id="data_nascimento" type="text" class="form-control" value="{{ paciente.data_nascimento }}" >
+											  </div>
+											 <div class="col">
+												  <label for="naturalidade" class="placeholder">Naturalidade</label>
+												  <input id="naturalidade" type="text" class="form-control" value="{{ paciente.naturalidade }}" >
 											  </div>
 										 </div>
+										<div class="dropdown-divider"></div>
 										<div class="row">
 											  <div class="col">
-												  <label for="nacionalidade" class="placeholder">Nacionalidade</label>
-												  <input id="nacionalidade" type="text" class="form-control" required >
+												  <label for="numero_documento" class="placeholder">Numero Documento</label>
+												  <input id="numero_documento" type="text" class="form-control"  value="{{ paciente.numero_doc }}" >
 											  </div>
 											  <div class="col">
-												  <label for="naturalidade" class="placeholder">Naturalidade</label>
-												  <input id="naturalidade" type="text" class="form-control"  >
+												  <label for="nif" class="placeholder">NIF</label>
+												  <input id="nif" type="text" class="form-control"  value="{{ paciente.nif }}">
 											  </div>
 										 </div>
 
 									</div>
+						<div class="card-action">
+							<button type="submit" class="btn btn-success">Alterar</button>
 
+						</div>
 
 								</div>
 								<div class="tab-pane fade" id="pills-empresa-nobd" role="tabpanel" aria-labelledby="pills-empresa-tab-nobd">
-									<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-									<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
-									</p>
-								</div>
+									<div class="row">
+											  <div class="col">
+												  <label for="criado_em" class="placeholder">Criado Em</label>
+												  <input id="criado_em" type="text" class="form-control" value="{{ paciente.criado_em }}" required >
+											  </div>
+											  <div class="col">
+												  <label for="fator_sanguino" class="placeholder">Fator Sanguino</label>
+												  <input id="fator_sanguino" type="text" class="form-control" value="{{ paciente.fator_sanguino }}" >
+											  </div>
+											 <div class="col">
+												  <label for="etnia" class="placeholder">Etnia</label>
+												  <input id="etnia" type="text" class="form-control" value="{{ paciente.etnia }}" >
+											  </div>
+										 </div>
+
+										<div class="dropdown-divider"></div>
+									<div class="row">
+											  <div class="col">
+												  <label for="mae" class="placeholder">Nome da Mãe</label>
+												  <input id="mae" type="text" class="form-control" value="{{ paciente.mae }}" required >
+											  </div>
+											  <div class="col">
+												  <label for="pai" class="placeholder">Nome do Pai</label>
+												  <input id="pai" type="text" class="form-control" value="{{ paciente.pai }}" >
+											  </div>
+
+									</div>
+
+								<div class="dropdown-divider"></div>
+								<div class="row">
+											  <div class="col">
+												  <label for="escolaridade" class="placeholder">Escolaridade</label>
+												  <input id="escolaridade" type="text" class="form-control" value="{{ paciente.escolaridade }}" required >
+											  </div>
+											  <div class="col">
+												  <label for="profissao" class="placeholder">Profissao</label>
+												  <input id="profissao" type="text" class="form-control" value="{{ paciente.profissao }}" >
+											  </div>
+									<div class="col">
+												  <label for="entidade_patronal" class="placeholder">Entidade Patronal</label>
+												  <input id="entidade_patronal" type="text" class="form-control" value="{{ paciente.entidade_patronal }}" >
+											  </div>
+
+										 </div>
+
+								<div class="dropdown-divider"></div>
+								<div class="row">
+											  <div class="col">
+												  <label for="obs" class="placeholder">Observação</label>
+												  <textarea id="obs" type="text" class="form-control" value="{{ paciente.obs }}"  ></textarea>
+											  </div>
+
+
+										 </div>
+									<div class="card-action">
+							<button type="submit" class="btn btn-success">Alterar</button>
+
+						</div>
+									</div>
 								<div class="tab-pane fade" id="pills-profile-nobd" role="tabpanel" aria-labelledby="pills-profile-tab-nobd">
-									<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-									<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
-									</p>
+									<table class="table mt-3">
+								<thead>
+									<tr>
+										<th scope="col">Data</th>
+										<th scope="col">Procedimento</th>
+										<th scope="col">Convênio</th>
+										<th scope="col">Valor</th>
+										<th scope="col">Pagamento</th>
+									</tr>
+								</thead>
+								<tbody>
+
+
+								</tbody>
+							</table>
 								</div>
 								<div class="tab-pane fade" id="pills-contact-nobd" role="tabpanel" aria-labelledby="pills-contact-tab-nobd">
-									<p>Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
+									<table class="table mt-3">
+								<thead>
+									<tr>
+										<th scope="col">Data</th>
+										<th scope="col">Produto</th>
+										<th scope="col">Quantidade</th>
+										<th scope="col">Valor Unit</th>
+										<th scope="col">Subtotal</th>
+										<th scope="col">Pagamento</th>
+									</tr>
+								</thead>
+								<tbody>
 
-									<p> But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their</p>
+
+								</tbody>
+							</table>
 								</div>
 								<div class="tab-pane fade" id="pills-fiscal-nobd" role="tabpanel" aria-labelledby="pills-fiscal-tab-nobd">
-									<p>Fiscal a rethoric question ran over her cheek, then she continued her way. On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
+									<div class="col-sm-9 col-md-12">
+					<div class="card card-stats card-round">
+						<div class="card-body ">
+							<div class="row">
+								<div class="col-5">Contas a Receber
+									<div class="icon-big text-center">
 
-									<p> But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+									<div class="col-sm-9 col-md-12">
+					<div class="card card-stats card-round">
+						<div class="card-body ">
+							<div class="row">
+								<div class="col-5">Histórico
+									<div class="icon-big text-center">
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
 								</div>
 								<div class="tab-pane fade" id="pills-salary-nobd" role="tabpanel" aria-labelledby="pills-salary-tab-nobd">
-									<p>Salary a rethoric question ran over her cheek, then she continued her way. On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
+									<table class="table mt-3">
+								<thead>
+									<tr>
+										<th scope="col">Agenda</th>
+										<th scope="col">Data</th>
+										<th scope="col">Hora</th>
+										<th scope="col">Status</th>
+										<th scope="col">Observações</th>
+										<th scope="col">Ações</th>
+									</tr>
+								</thead>
+								<tbody>
 
-									<p> But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their</p>
-								</div>
+
+								</tbody>
+							</table>
 
 							</div>
 						</div>

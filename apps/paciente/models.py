@@ -19,6 +19,15 @@ class Paciente(models.Model):
     data_nascimento = models.DateField(max_length=10, blank=True)
     empresa = models.ForeignKey(Empresa, on_delete=models.PROTECT)
     criador_por = models.ForeignKey(User, on_delete=models.CASCADE)
+    fator_sanguino = models.CharField(max_length=5, blank=True)
+    criado_em = models.CharField(max_length=8, blank=True)
+    etnia = models.CharField(max_length=10, blank=True)
+    mae = models.CharField(max_length=40, blank=True)
+    pai = models.CharField(max_length=40, blank=True)
+    escolaridade = models.CharField(max_length=25, blank=True)
+    profissao = models.CharField(max_length=25, blank=True)
+    entidade_patronal = models.CharField(max_length=25, blank=True)
+    obs =models.TextField(blank=True)
 
     def __str__(self):
         return self.nome
