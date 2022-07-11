@@ -11,6 +11,9 @@ class Funcionario(models.Model):
     user = models.OneToOneField(User, on_delete=models.PROTECT, null=True,blank=True)
     empresa = models.ForeignKey(Empresa, on_delete=models.PROTECT)
 
+    def __str__(self):
+        return self.nome
+
 
     def get_absolute_url(self):
         return reverse('list_funcionario')

@@ -1,62 +1,89 @@
 
-{% extends "layouts/base.html" %}
+<!-- =========================================================
+* Atlantis PRO Bootstrap Dashboard coded in Flask
+=========================================================
 
-{% block title %} Login {% endblock title %}
+* Design Product Page: https://www.themekita.com/atlantis-bootstrap-dashboard.html
+* Design Copyright:    ThemeKita (https://www.themekita.com/)
 
-<!-- Specific Page CSS goes HERE  -->
-{% block stylesheets %}{% endblock stylesheets %}
+* Web App Product Page: https://appseed.us/admin-dashboards/flask-dashboard-atlantis-dark-pro
+* Web App Copyright:    AppSeed - Web App Generator using 
 
-{% block content %}
+* For more coded web apps please visit https://AppSeed.us
+=========================================================
 
-    <div class="page-inner">
-        <div class="page-header">
-            <h4 class="page-title">Login</h4>
-            <ul class="breadcrumbs">
-                <li class="nav-home">
-                    <a href="#">
-                        <i class="flaticon-home"></i>
-                    </a>
-                </li>
-                <li class="separator">
-                    <i class="flaticon-right-arrow"></i>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Authentication</a>
-                </li>
-                <li class="separator">
-                    <i class="flaticon-right-arrow"></i>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Login</a>
-                </li>
-            </ul>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <title>
+        Django Atlantis Dark PRO -  Login  | AppSeed
+    </title>
+        
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="https://appsrv1-147a1.kxcdn.com/atlantis-pro/img/icon.ico" type="image/x-icon"/>
 
-                            {% if msg %}
-                                <span class="text-danger">{{ msg | safe }}</span>
-                            {% else %}
-                            <span>
-                                Add your credentials
-                            </span>
-                            {% endif %}
+	<!-- Fonts and icons -->
+	<script src="https://appsrv1-147a1.kxcdn.com/atlantis-pro/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Lato:300,400,700,900"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['https://appsrv1-147a1.kxcdn.com/atlantis-pro/css/fonts.min.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+	
+	<!-- CSS Files
+	<link rel="stylesheet" href="https://appsrv1-147a1.kxcdn.com/atlantis-pro/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://appsrv1-147a1.kxcdn.com/atlantis-pro/css/atlantis.css"> -->
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/assets/css/atlantis.css">
 
-                        </div>
-                    </div>
+	<!-- Specific Page CSS goes HERE  -->  
+	
 
-                    <form method="post" action="">
+</head>
+<body class=" login ">
+
+    
+
+	<div class="wrapper wrapper-login wrapper-login-full p-0">
+		
+		<div class="login-aside w-50 d-flex flex-column align-items-center justify-content-center text-center bg-secondary-gradient">
+			<h1 class="title fw-bold text-white mb-3">
+				<a target="_blank" rel="noopener noreferrer" 
+				   href="https://appseed.us/admin-dashboards/django-dashboard-atlantis-dark-pro">Django Atlantis Dark PRO</a>
+			</h1>
+			<p class="subtitle text-white op-7">
+				&copy <a class="text-white" 
+				         target="_blank" rel="noopener noreferrer" 
+				         href="http://www.themekita.com?ref=appseed">GestCare</a>
+				- coded by <a target="_blank" rel="noopener noreferrer" class="text-white" 
+				             >Atlantis</a>.
+			</p>
+		</div>
+
+		<div class="login-aside w-50 d-flex align-items-center justify-content-center bg-white">
+			<div class="container container-login container-transparent animated fadeIn">
+				 {% if msg %}
+				<span class="text-danger">{{ msg | safe }}</span>
+				{% else %}
+				<h3 class="text-center">Credencias de acesso</h3>
+
+     		     {% endif %}
+
+					<form method="post" action="">
 
                         {% csrf_token %}
 
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4">
+						<div class="login-form">
 
-                                    <div class="form-group">
+							  <div class="form-group">
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">
@@ -67,8 +94,10 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
+
+							<div class="form-group">
                                         <div class="input-group mb-3">
+
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">
                                                     <i class="icon-lock"></i>
@@ -76,25 +105,30 @@
                                             </div>
                                             {{ form.password }}
                                         </div>
+								<a href="#" class="link float-right">Esqueceu a Palavra-Passe ?</a>
                                     </div>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-action">
-                            <button type="submit" class="btn btn-success">Submit</button>
-                            &nbsp; &nbsp;
-                            <span>Not a member?</span> Please <a href="{% url 'register' %}" >Register</a>
-                        </div>
+							<div class="form-group form-action-d-flex mb-3">
 
-                    </form>
+						  <button type="submit" class="btn btn-success">Submit</button>
+                          	</div>
 
-                </div>
-            </div>
-        </div>
-    </div>
 
-{% endblock content %}
+						</div>
 
-<!-- Specific JS goes HERE -->
-{% block javascripts %}{% endblock javascripts %}
+					</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+    <!-- Specific Page JS goes HERE  -->
+	
+
+</body>
+</html>

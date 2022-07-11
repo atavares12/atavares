@@ -18,6 +18,7 @@ class PacienteCreate(CreateView):
     def form_valid(self, form):
         paciente = form.save(commit=False)
         paciente.empresa = self.request.user.funcionario.empresa
+        paciente.criador_por = self.request.user.funcionario.user
         paciente.save()
         return super(PacienteCreate, self).form_valid(form)
 
