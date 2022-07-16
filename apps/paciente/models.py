@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from apps.funcionario.models import Funcionario
 from apps.empresa.models import Empresa
 from django.urls import reverse
+from django.core.exceptions import ValidationError
+from django.utils.translation import gettext_lazy as _
 
 
 SEXO_CHOICES = (
@@ -10,9 +12,16 @@ SEXO_CHOICES = (
     ('F','Feminio')
 )
 
+def validate_even(value):
+    if value == 0:
+        raise ValidationError(
+            _('Nao pode ser zero'),
+            params={'value': value},
+        )
+
 class Paciente(models.Model):
     nome = models.CharField(max_length=40)
-    nif = models.IntegerField(blank=True)
+    nif = models.IntegerField(null=True,blank=True,validators=[validate_even])
     numero_doc = models.IntegerField(blank=True)
     sexo = models.CharField(max_length=1, choices=SEXO_CHOICES)
     naturalidade = models.CharField(max_length=10, blank=True)
@@ -35,3 +44,4 @@ class Paciente(models.Model):
 
     def get_absolute_url(self):
         return reverse('list_paciente')
+

@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'apps.funcionario',
     'apps.empresa',
     'apps.paciente',
+    'apps.agenda',
+    'apps.financeiro',
     'website'
 ]
 
@@ -143,6 +145,7 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #############################################################
 #############################################################
+
 
 
 django_heroku.settings(locals())
